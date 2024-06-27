@@ -1,1 +1,69 @@
-<p>navbar works!</p>
+<header
+  class="py-4 px-4 md:px-16"
+  [ngClass]="{ 'fix-header': showSlidingPanel }"
+>
+  <nav class="flex items-center">
+    <a href="/" class="flex items-center">
+      <div>
+        <img
+          elementtiming="nbf-header-logo-desktop"
+          src="https://dartdentalmiami.com/wp-content/uploads/2022/03/logo.png"
+          alt="dartdental logo"
+          style="display: block"
+          fetchpriority="high"
+          loading="eager"
+          decoding="async"
+          data-loader="raw"
+          class="w-48"
+        />
+      </div>
+    </a>
+    <div class="ms-auto navItems">
+      <ul class="flex gap-8 items-center">
+        <li class="xl:p-4 cursor-pointer">
+          <a href="#">Sobre nosotros</a>
+        </li>
+        <li class="xl:p-4 cursor-pointer">
+          <a href="#">Servicios</a>
+        </li>
+        <li class="xl:p-4 cursor-pointer">
+          <a href="#">Contacto</a>
+        </li>
+        <li class="xl:p-4 cursor-pointer">
+          <a href="#">Blog</a>
+        </li>
+        <a
+          href="tel:+543462680563"
+          class="bg-[#29ABE2] text-white hidden xl:block p-4 cursor-pointer"
+          >Obtener turno</a
+        >
+      </ul>
+    </div>
+    <div class="hamburger ms-auto" (click)="toggleSlidingPanel()">
+      <span
+        [ngClass]="{
+          'icon-[radix-icons--hamburger-menu]': !showSlidingPanel,
+          'icon-[ph--x-light]': showSlidingPanel
+        }"
+        class="icon-[radix-icons--hamburger-menu]"
+        role="img"
+        aria-hidden="true"
+      ></span>
+    </div>
+    @if(showSlidingPanel){
+    <div class="container-sliding">
+      <ul class="flex flex-col gap-20 cursor-pointer text-4xl text-center">
+        <li>Sobre nosotros</li>
+        <li>Servicios</li>
+        <li>Contacto</li>
+        <li>blog</li>
+        <a
+          href="tel:+543462680563"
+          class="bg-[#29ABE2] mx-8 text-white p-4 cursor-pointer"
+          >Obtener turno</a
+        >
+      </ul>
+    </div>
+    }
+  </nav>
+</header>
