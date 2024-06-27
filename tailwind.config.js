@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const { addDynamicIconSelectors } = require('@iconify/tailwind')
+
 module.exports = {
   content: [
     "./src/**/*.{html,ts}",
@@ -6,6 +8,6 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [addDynamicIconSelectors()]
 }
 
