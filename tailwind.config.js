@@ -6,8 +6,16 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        customBlue: '#29ABE2',
+      },
+    },
+  },
+  variants: {
+    extend: {
+      borderColor: ['focus'],
+    },
   },
   plugins: [addDynamicIconSelectors()]
 }
-
