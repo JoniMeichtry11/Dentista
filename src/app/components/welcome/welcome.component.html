@@ -1,1 +1,22 @@
 <app-swiper-carousel></app-swiper-carousel>
+<div class="p-8">
+  <div class="flex flex-col md:flex-row">
+    <div class="w-full justify-center hidden xl:flex">
+      <img src="https://dartdentalmiami.com/wp-content/uploads/elementor/thumbs/porque-elegirnos-2-qnzcvu5onaik9yt1i50tuu0mivgz6f45dvrvitnzek.png" alt="doctora" class="w-full p-16 mt-16 animate-up-and-down max-w-[500px]">
+    </div>
+    <div>
+      <h6 class="text-[#29ABE2]">¿Porque elegir a</h6>
+      <h2 class="text-4xl font-medium">D'ART DENTAL?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-16">
+        @for(data of listData; track data;){
+          <div>
+            <span [class]="data.icon" class="text-7xl text-[#29ABE2]" role="img" aria-hidden="true"></span>
+            <h3 class="text-xl font-bold">{{data.title}}</h3>
+            <p>{{data.description}}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>
+
